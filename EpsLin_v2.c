@@ -27,20 +27,21 @@
 //  TO COMPILE:
 //  ===========
 //
-//  Should compile in Linux, macOS, and Windows (Cygwin) just by typing:
+//  Should compile in Linux, macOS, and Windows (Cygwin, WSL2) just by typing:
 //
-//    gcc EpsLin_v1.58.c -o epslin
+//  Compiled in WSL2 in Ubuntu 20.04 distro.
 //
-//  In Windows you have to install "fdrawcmd.sys" from
-//         http://simonowen.com/fdrawcmd/
+//    gcc EpsLin_v2.c -o epslin
 //
-//  and get the header file from
-//         http://simonowen.com/fdrawcmd/fdrawcmd.h
+//  History
+//  =============
 //
-//  and put it in the same directory as the EpsLin source.
+//  v2: (forked by Mikko Helin)
+//       - Fixed directory creation 
+//           e.g.("exempli gratia") "epslin -m ASR-BOX1 scsi.img" creates a subdirectory "ASR-BOX1" 
+//       - Fixed putting EFE's to some chosen directory using wildcards or "ALL" filter 
+//           e.g. "epslin -d1 scsi.img -p all" copies all EFE's in current directory to scsi.img directory with id 1
 //
-//  HISTORY
-//  =======
 //
 //  v9.99: [FUTURE]
 //       - Optional "allowed" devices list to minimize
